@@ -1,0 +1,209 @@
+fileVersion: 1
+id: 8ffb9b62-d6c0-4b62-9121-36f52f7d9b2a
+name: SATV0_ORDERS
+operation:
+  config:
+    disable_hwm: false
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ACME_RETAIL
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f1175081-b74e-4973-8548-ff3612471ad1
+          stepCounter: 8ffb9b62-d6c0-4b62-9121-36f52f7d9b2a
+        config:
+          is_hk: true
+        dataType: STRING
+        description: ""
+        name: HK_ORDER_ID_H
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2e4df350-9cc8-4f96-9af2-08d1f70ceb86
+                stepCounter: c00ab3a0-1773-4ae4-90b1-25322035f99b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ddf626ee-bd47-4a64-b6a8-69dbe75e8d9f
+          stepCounter: 8ffb9b62-d6c0-4b62-9121-36f52f7d9b2a
+        config:
+          is_hd: true
+        dataType: STRING
+        description: ""
+        name: HK_ORDERS_S
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 43de35ad-0d1e-4275-842e-93e905696356
+                stepCounter: c00ab3a0-1773-4ae4-90b1-25322035f99b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 43a803b1-2229-4181-b578-fff09d5594e9
+          stepCounter: 8ffb9b62-d6c0-4b62-9121-36f52f7d9b2a
+        config: {}
+        dataType: TIMESTAMP
+        description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+        name: LDTS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a490760f-b06b-4457-b8f9-403851fa3ade
+                stepCounter: c00ab3a0-1773-4ae4-90b1-25322035f99b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6d536377-1f2e-4e62-a7f2-fa4e7fd0c771
+          stepCounter: 8ffb9b62-d6c0-4b62-9121-36f52f7d9b2a
+        config: {}
+        dataType: STRING
+        description: The Record Source (RSRC) describes the source of this data.
+        name: RSRC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5611ac23-5723-4516-b247-863b1d5c6862
+                stepCounter: c00ab3a0-1773-4ae4-90b1-25322035f99b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 367fff5b-c00d-478f-9917-5f64e527d30a
+          stepCounter: 8ffb9b62-d6c0-4b62-9121-36f52f7d9b2a
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: ORDER_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5317473e-af87-45e8-b206-1a1a28454fed
+                stepCounter: c00ab3a0-1773-4ae4-90b1-25322035f99b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b80d67b3-8ea6-40b3-8363-a7f1a3e0c971
+          stepCounter: 8ffb9b62-d6c0-4b62-9121-36f52f7d9b2a
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: SHIP_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 667dd43d-d0b4-4c93-89ed-c873b641c475
+                stepCounter: c00ab3a0-1773-4ae4-90b1-25322035f99b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b5062f9a-2975-4d78-badc-50435943850b
+          stepCounter: 8ffb9b62-d6c0-4b62-9121-36f52f7d9b2a
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: DELIVERY_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ddca3a55-7586-4885-984d-50eacf8d0aa9
+                stepCounter: c00ab3a0-1773-4ae4-90b1-25322035f99b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 796aaeb0-e027-4b1d-b8da-23036f3cc0f4
+          stepCounter: 8ffb9b62-d6c0-4b62-9121-36f52f7d9b2a
+        config: {}
+        dataType: VARCHAR(20)
+        description: ""
+        name: STATUS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 831a6a74-7b57-4781-8ff3-ffaac588abc8
+                stepCounter: c00ab3a0-1773-4ae4-90b1-25322035f99b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9a779167-b757-4469-9a22-5b3230b4e867
+          stepCounter: 8ffb9b62-d6c0-4b62-9121-36f52f7d9b2a
+        config: {}
+        dataType: VARCHAR(20)
+        description: ""
+        name: PAYMENT_METHOD
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d14d081e-9e2e-457b-9b95-9e66d2de747a
+                stepCounter: c00ab3a0-1773-4ae4-90b1-25322035f99b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 550b5862-8118-4c71-b821-5900b36fe25e
+          stepCounter: 8ffb9b62-d6c0-4b62-9121-36f52f7d9b2a
+        config: {}
+        dataType: VARCHAR(30)
+        description: ""
+        name: SHIPPING_METHOD
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d2865164-2152-46b8-bade-e9cbae3e6268
+                stepCounter: c00ab3a0-1773-4ae4-90b1-25322035f99b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 29f8f53c-e67a-4559-806f-5dd0fd8ec3fb
+          stepCounter: 8ffb9b62-d6c0-4b62-9121-36f52f7d9b2a
+        config: {}
+        dataType: VARCHAR(20)
+        description: ""
+        name: DISCOUNT_CODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f6e4758c-90ec-41cb-8bb3-bea8671cfb3f
+                stepCounter: c00ab3a0-1773-4ae4-90b1-25322035f99b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9b0e3d26-99e4-4daf-8fbb-ccf66e98f791
+          stepCounter: 8ffb9b62-d6c0-4b62-9121-36f52f7d9b2a
+        config: {}
+        dataType: VARCHAR(500)
+        description: ""
+        name: NOTES
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fea57f21-3f18-4bde-9187-00611a62d5d5
+                stepCounter: c00ab3a0-1773-4ae4-90b1-25322035f99b
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          DVSTG_ORDERS: c00ab3a0-1773-4ae4-90b1-25322035f99b
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: ACME_RETAIL
+            nodeName: DVSTG_ORDERS
+        join:
+          joinCondition: FROM {{ ref('ACME_RETAIL', 'DVSTG_ORDERS') }} "DVSTG_ORDERS"
+        name: SATV0_ORDERS
+        noLinkRefs: []
+  name: SATV0_ORDERS
+  overrideSQL: false
+  schema: ""
+  sqlType: DataVault:::8
+  type: sql
+  version: 1
+type: Node

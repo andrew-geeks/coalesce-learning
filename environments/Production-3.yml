@@ -1,0 +1,14 @@
+fileVersion: 1
+id: "3"
+mappingDefinitions:
+  ACME_RETAIL:
+    database: ""
+    schema: ""
+  SAMPLE:
+    database: SNOWFLAKE_SAMPLE_DATA
+    schema: TPCH_SF1
+  WORK:
+    database: ""
+    schema: ""
+name: Production
+type: Environment

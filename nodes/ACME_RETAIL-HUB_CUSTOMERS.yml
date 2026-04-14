@@ -1,0 +1,123 @@
+fileVersion: 1
+id: 8be2e792-9913-4f93-9195-71e1c2e405da
+name: HUB_CUSTOMERS
+operation:
+  config:
+    disable_hwm: true
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: true
+  locationName: ACME_RETAIL
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 95d57bab-4301-4a3f-9d39-0a23267cd859
+          stepCounter: 8be2e792-9913-4f93-9195-71e1c2e405da
+        config:
+          is_Hub_hk: true
+        dataType: STRING
+        description: ""
+        name: HK_CUSTOMER_KEY_H
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ba4feeb3-8bda-4700-821e-4f305176bf33
+                stepCounter: 1f680f3e-9fe9-457e-b93f-2a6d0b00d315
+            transform: ""
+          - columnReferences:
+              - columnCounter: 9b87c6e5-7a41-486a-bac7-932757c61e1b
+                stepCounter: c00ab3a0-1773-4ae4-90b1-25322035f99b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e96715e9-1094-4994-a6bc-00915b313e05
+          stepCounter: 8be2e792-9913-4f93-9195-71e1c2e405da
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: CUSTOMER_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3152d054-2163-4d69-8006-3008c5e46750
+                stepCounter: 1f680f3e-9fe9-457e-b93f-2a6d0b00d315
+            transform: ""
+          - columnReferences:
+              - columnCounter: c20b1e16-77f5-4903-ad3c-bf386e10a8dd
+                stepCounter: c00ab3a0-1773-4ae4-90b1-25322035f99b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8c7eebff-a670-47a2-b238-9ba3eb2ffa17
+          stepCounter: 8be2e792-9913-4f93-9195-71e1c2e405da
+        config: {}
+        dataType: TIMESTAMP
+        description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+        name: LDTS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fd4ebe21-6179-4a80-b6d3-537b9dc761cf
+                stepCounter: 1f680f3e-9fe9-457e-b93f-2a6d0b00d315
+            transform: ""
+          - columnReferences:
+              - columnCounter: a490760f-b06b-4457-b8f9-403851fa3ade
+                stepCounter: c00ab3a0-1773-4ae4-90b1-25322035f99b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fc96c374-af48-441b-b952-151dab72d285
+          stepCounter: 8be2e792-9913-4f93-9195-71e1c2e405da
+        config: {}
+        dataType: STRING
+        description: The Record Source (RSRC) describes the source of this data.
+        name: RSRC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fd3bf19a-9727-4c66-ad9f-07d645740aad
+                stepCounter: 1f680f3e-9fe9-457e-b93f-2a6d0b00d315
+            transform: ""
+          - columnReferences:
+              - columnCounter: 5611ac23-5723-4516-b247-863b1d5c6862
+                stepCounter: c00ab3a0-1773-4ae4-90b1-25322035f99b
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          DVSTG_CUSTOMERS: 1f680f3e-9fe9-457e-b93f-2a6d0b00d315
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: ACME_RETAIL
+            nodeName: DVSTG_CUSTOMERS
+        join:
+          joinCondition: FROM {{ ref('ACME_RETAIL', 'DVSTG_CUSTOMERS') }} "DVSTG_CUSTOMERS"
+        name: HUB_CUSTOMERS
+        noLinkRefs: []
+      - aliases:
+          DVSTG_ORDERS: c00ab3a0-1773-4ae4-90b1-25322035f99b
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: ACME_RETAIL
+            nodeName: DVSTG_ORDERS
+        join:
+          joinCondition: FROM {{ ref('ACME_RETAIL', 'DVSTG_ORDERS') }} "DVSTG_ORDERS"
+        name: DVSTG_ORDERS
+        noLinkRefs: []
+  name: HUB_CUSTOMERS
+  overrideSQL: false
+  schema: ""
+  sqlType: DataVault:::6
+  type: sql
+  version: 1
+type: Node

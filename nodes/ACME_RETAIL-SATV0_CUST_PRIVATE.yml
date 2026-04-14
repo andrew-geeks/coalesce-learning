@@ -1,0 +1,167 @@
+fileVersion: 1
+id: 10867c32-af41-48f5-aa07-dc619a5802d5
+name: SATV0_CUST_PRIVATE
+operation:
+  config:
+    disable_hwm: false
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ACME_RETAIL
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 18b4d5f4-6395-44f7-b9dc-6f180d0e23d3
+          stepCounter: 10867c32-af41-48f5-aa07-dc619a5802d5
+        config:
+          is_hk: true
+        dataType: STRING
+        description: ""
+        name: HK_CUSTOMER_KEY_H
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ba4feeb3-8bda-4700-821e-4f305176bf33
+                stepCounter: 1f680f3e-9fe9-457e-b93f-2a6d0b00d315
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 09bbd139-5e60-4546-a0d7-cf4333e59fa4
+          stepCounter: 10867c32-af41-48f5-aa07-dc619a5802d5
+        config:
+          is_hd: true
+        dataType: STRING
+        description: ""
+        name: HD_CUSTOMERS_P_S
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e336f020-9176-44b1-8595-f27d338760fe
+                stepCounter: 1f680f3e-9fe9-457e-b93f-2a6d0b00d315
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4082b542-8b96-4ad0-9d33-864ca28ad9ff
+          stepCounter: 10867c32-af41-48f5-aa07-dc619a5802d5
+        config: {}
+        dataType: TIMESTAMP
+        description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+        name: LDTS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fd4ebe21-6179-4a80-b6d3-537b9dc761cf
+                stepCounter: 1f680f3e-9fe9-457e-b93f-2a6d0b00d315
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1c3ac58b-8c86-4dea-840f-756926316c30
+          stepCounter: 10867c32-af41-48f5-aa07-dc619a5802d5
+        config: {}
+        dataType: STRING
+        description: The Record Source (RSRC) describes the source of this data.
+        name: RSRC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fd3bf19a-9727-4c66-ad9f-07d645740aad
+                stepCounter: 1f680f3e-9fe9-457e-b93f-2a6d0b00d315
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 43954875-d444-4006-9863-47dcd11578e7
+          stepCounter: 10867c32-af41-48f5-aa07-dc619a5802d5
+        config: {}
+        dataType: VARCHAR(100)
+        description: ""
+        name: EMAIL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3932aa96-bf4b-4e75-925d-f0de05c6784c
+                stepCounter: 1f680f3e-9fe9-457e-b93f-2a6d0b00d315
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 96501965-bd28-4a28-97ec-b62e82076e16
+          stepCounter: 10867c32-af41-48f5-aa07-dc619a5802d5
+        config: {}
+        dataType: VARCHAR(20)
+        description: ""
+        name: PHONE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: edc91287-2d61-4724-83f1-8459531801ae
+                stepCounter: 1f680f3e-9fe9-457e-b93f-2a6d0b00d315
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 394ba7ad-70c6-4f70-8de8-fd91f2e1f118
+          stepCounter: 10867c32-af41-48f5-aa07-dc619a5802d5
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: CREATED_AT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2906fdd7-e9a8-4309-a446-4acecedde1b0
+                stepCounter: 1f680f3e-9fe9-457e-b93f-2a6d0b00d315
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4e35b4c9-81a3-4f05-87bf-64bb5956024e
+          stepCounter: 10867c32-af41-48f5-aa07-dc619a5802d5
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: UPDATED_AT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 552c5653-cf76-459b-9d6f-bfc973d23dbb
+                stepCounter: 1f680f3e-9fe9-457e-b93f-2a6d0b00d315
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 46004268-9d19-4c83-bcf2-f8e7f7a4856b
+          stepCounter: 10867c32-af41-48f5-aa07-dc619a5802d5
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: IS_ACTIVE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fe2893c4-5be2-4dbf-a3a2-e0649b6ce7a6
+                stepCounter: 1f680f3e-9fe9-457e-b93f-2a6d0b00d315
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          DVSTG_CUSTOMERS: 1f680f3e-9fe9-457e-b93f-2a6d0b00d315
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: ACME_RETAIL
+            nodeName: DVSTG_CUSTOMERS
+        join:
+          joinCondition: FROM {{ ref('ACME_RETAIL', 'DVSTG_CUSTOMERS') }} "DVSTG_CUSTOMERS"
+        name: SATV0_CUST_PRIVATE
+        noLinkRefs: []
+  name: SATV0_CUST_PRIVATE
+  overrideSQL: false
+  schema: ""
+  sqlType: DataVault:::8
+  type: sql
+  version: 1
+type: Node

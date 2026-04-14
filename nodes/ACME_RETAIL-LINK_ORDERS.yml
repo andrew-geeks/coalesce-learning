@@ -1,0 +1,96 @@
+fileVersion: 1
+id: 3d625ba6-51b0-4b90-aa65-f82549e3a19a
+name: LINK_ORDERS
+operation:
+  config:
+    disable_hwm: true
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ACME_RETAIL
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4ffcc3ae-f0bd-4089-ac5a-f6e8d8160ec9
+          stepCounter: 3d625ba6-51b0-4b90-aa65-f82549e3a19a
+        config:
+          is_Link_hk: true
+        dataType: STRING
+        description: ""
+        name: HK_ORDERS_CUSTOMERS_L
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 63fc16ce-1e4b-4406-9ab7-8ccbe850b739
+                stepCounter: c00ab3a0-1773-4ae4-90b1-25322035f99b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2a76fe17-8dd0-4a70-b1a6-2d26a7c3537b
+          stepCounter: 3d625ba6-51b0-4b90-aa65-f82549e3a19a
+        config: {}
+        dataType: STRING
+        description: ""
+        name: HK_ORDER_ID_H
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2e4df350-9cc8-4f96-9af2-08d1f70ceb86
+                stepCounter: c00ab3a0-1773-4ae4-90b1-25322035f99b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 04bbbf07-3175-4e1e-b315-f272d40094ae
+          stepCounter: 3d625ba6-51b0-4b90-aa65-f82549e3a19a
+        config: {}
+        dataType: TIMESTAMP
+        description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+        name: LDTS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a490760f-b06b-4457-b8f9-403851fa3ade
+                stepCounter: c00ab3a0-1773-4ae4-90b1-25322035f99b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e74ea8c1-bd97-4332-916c-882b26b17b1f
+          stepCounter: 3d625ba6-51b0-4b90-aa65-f82549e3a19a
+        config: {}
+        dataType: STRING
+        description: The Record Source (RSRC) describes the source of this data.
+        name: RSRC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5611ac23-5723-4516-b247-863b1d5c6862
+                stepCounter: c00ab3a0-1773-4ae4-90b1-25322035f99b
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          DVSTG_ORDERS: c00ab3a0-1773-4ae4-90b1-25322035f99b
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: ACME_RETAIL
+            nodeName: DVSTG_ORDERS
+        join:
+          joinCondition: FROM {{ ref('ACME_RETAIL', 'DVSTG_ORDERS') }} "DVSTG_ORDERS"
+        name: LINK_ORDERS
+        noLinkRefs: []
+  name: LINK_ORDERS
+  overrideSQL: false
+  schema: ""
+  sqlType: DataVault:::7
+  type: sql
+  version: 1
+type: Node
